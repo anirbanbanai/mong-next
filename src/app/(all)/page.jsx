@@ -14,7 +14,7 @@ const [data, setData] = useState()
       // eslint-disable-next-line react-hooks/rules-of-hooks
       } = useForm()
       const onSubmit = (data) => {
-        axios.post("http://localhost:3000/api/topics", data)
+        axios.post("https://mong-next.vercel.app/api/topics", data)
         .then(data=>{
             console.log(data);
         })
@@ -22,7 +22,7 @@ const [data, setData] = useState()
 
       // eslint-disable-next-line react-hooks/rules-of-hooks
       useEffect(()=>{
-        fetch("http://localhost:3000/api/topics/")
+        fetch("https://mong-next.vercel.app/api/topics/")
         .then(res=>res.json())
         .then(data=>{
             console.log(data);
