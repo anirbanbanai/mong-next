@@ -1,4 +1,5 @@
-const { Schema, default: mongoose } = require("mongoose");
+// const { Schema, default: mongoose } = require("mongoose");
+import mongoose, { Schema } from "mongoose";
 
 const topicSchema = new Schema({
     name: String,
@@ -10,6 +11,6 @@ const topicSchema = new Schema({
 }
 );
 
-const Topic = mongoose.models.Topic || mongoose.model("anirban", topicSchema);
+const Topic = mongoose.models.Gopic || mongoose.model("Gopic", topicSchema);
 
 export default Topic;
