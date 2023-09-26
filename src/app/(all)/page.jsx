@@ -15,7 +15,7 @@ const page = () => {
         // eslint-disable-next-line react-hooks/rules-of-hooks
     } = useForm()
     const onSubmit = (data) => {
-        axios.post("http://localhost:3000/api/topics", data)
+        axios.post("https://mong-next.vercel.app/api/topics", data)
             .then(data => {
                 console.log(data);
             })
@@ -23,7 +23,7 @@ const page = () => {
 
     // eslint-disable-next-line react-hooks/rules-of-hooks
     useEffect(() => {
-        fetch("http://localhost:3000/api/topics/")
+        fetch("https://mong-next.vercel.app/api/topics/")
             .then(res => res.json())
             .then(data => {
                 console.log(data);
@@ -33,7 +33,7 @@ const page = () => {
 
     const handleDelete = (id) => {
         console.log(id);
-        axios.delete(`http://localhost:3000/api/topics?id=${id}`)
+        axios.delete(`https://mong-next.vercel.app/api/topics?id=${id}`)
         .then(data=>{
             console.log(data);
             if(data.data.message === "Topic deleted"){
