@@ -1,0 +1,15 @@
+const { Schema, default: mongoose } = require("mongoose");
+
+const topicSchema = new Schema({
+    name: String,
+    email: String,
+    des: String
+},
+{
+    timestamps: true,
+}
+);
+
+const Topic = mongoose.models.Topic || mongoose.model("anirban", topicSchema);
+
+export default Topic;
